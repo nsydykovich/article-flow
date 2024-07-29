@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+    ArticlFlow - List of all Articles
+{% endblock %}
+
+
+{% block content %}
+    <h1>Article</h1>
+
+    <ul>
+        {% for x in articles %}
+            <li><a href="article/{{ x.id }}">{{ x.title }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <a href="/">home</a>
+{% endblock %}
